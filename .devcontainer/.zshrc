@@ -19,10 +19,14 @@ setopt prompt_subst
 PROMPT='%B%(?.%F{green}%n .%F{red}%n )%f%b %B%F{27}%1~%f%b ' #%B%F{226}$(git_branch_name)%f%b%# '
 RPROMPT="%T"
 
-GOPATH=$HOME/go
-PATH="$PATH:/usr/local/go/bin"
 #Allow history
 SAVEHIST=1000  # Save most-recent 1000 lines
 HISTFILE=~/.zsh_history
 
+export EMSDK_QUIET=1
 source /emsdk/emsdk_env.sh
+
+
+export WASMTIME_HOME="/home/vscode/.wasmtime"
+
+export PATH="$PATH:$WASMTIME_HOME/bin/"

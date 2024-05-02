@@ -1,12 +1,12 @@
 
-NODE = /usr/bin/node 
+RUN = wasmtime
 CC = /emsdk/upstream/emscripten/emcc
 
-hello: hello.js
-	${NODE} hello.js 
+hello: hello.wasm
+	${RUN} hello.wasm 
 
-hello.js: hello.cpp
-	${CC}  hello.cpp -o hello.js
+hello.wasm: hello.cpp
+	${CC}  hello.cpp -o hello.wasm
 
 clean:
-	rm -f hello.js hello.wasm
+	rm -f hello.wasm

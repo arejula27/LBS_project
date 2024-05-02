@@ -4,7 +4,7 @@ RUN apt update -y
 RUN apt upgrade -y
 #RUN unminimize -y
 
-RUN apt install zsh  git sudo man  wget python3 nodejs npm -y
+RUN apt install zsh  git sudo man  curl python3 nodejs npm -y
 
 RUN useradd --create-home --shell /bin/zsh vscode
 RUN adduser vscode sudo 
@@ -30,3 +30,6 @@ RUN echo "vscode:vscode" | chpasswd
 
 
 COPY ./.zshrc /home/vscode
+
+USER vscode
+RUN curl https://wasmtime.dev/install.sh -sSf | bash
