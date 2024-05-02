@@ -1,8 +1,12 @@
 
+NODE = /usr/bin/node 
+CC = /emsdk/upstream/emscripten/emcc
 
-build:
-	emcc hello.cpp -o index.html
+hello: hello.js
+	${NODE} hello.js 
 
-serve: 
-	@echo "Starting server..."
-	@python3 -m http.server 8000
+hello.js: hello.cpp
+	${CC}  hello.cpp -o hello.js
+
+clean:
+	rm -f hello.js hello.wasm
