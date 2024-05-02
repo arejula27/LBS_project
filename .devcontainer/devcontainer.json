@@ -1,0 +1,13 @@
+{
+    "name": "LBS_project",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ormulahendry.terminal",
+                "ms-vscode.cpptools-extension-pack"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}
