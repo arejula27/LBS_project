@@ -8,6 +8,19 @@ noteApp: noteApp.wasm
 noteApp.wasm: noteApp.cpp
 	${CC}  noteApp.cpp -o noteApp.wasm
 
+noteApp_secure: noteApp_secure.wasm
+	${RUN} noteApp_secure.wasm 
+
+noteApp_secure.wasm: noteApp.cpp
+	${CC}  noteApp_secure.cpp -o noteApp_secure.wasm
+
+
+strings: strings.wasm
+	${RUN} strings.wasm 
+
+strings.wasm: strings.cpp
+	${CC}  strings.cpp -o strings.wasm
+
 main: main.wasm
 	${RUN} main.wasm 
 

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sstream>
 #include <iostream>
 #include <map>
 #include <vector>
@@ -8,24 +9,25 @@ using namespace std;
 
 int main()
 {
-    char passw[10];
-    char user[10];
-    char msg[5];
+    string passw;
+    string user;
+    string msg;
 
     printf("Enter username: ");
     fflush(stdout);
-    scanf("%s", user);
+    cin >> user;
+
     // flush
 
     printf("Enter password: ");
     fflush(stdout);
-    scanf("%s", passw);
+    cin >> passw;
 
-    if (strcmp(user, "admin") == 0 && strcmp(passw, "admin") == 0)
+    if (user == "admin" && passw == "admin")
     {
         cout << "Welcome admin!" << endl;
     }
-    else if (strcmp("pepe", user) == 0 && strcmp("123", passw) == 0)
+    else if ("pepe" == user && "123" == passw)
     {
         cout << "Welcome pepe!" << endl;
     }
@@ -74,9 +76,11 @@ int main()
                 break;
             }
             // ask note
-            printf("Enter message: ");
-            fflush(stdout);
-            scanf("%s", msg);
+
+            cout << "Enter message: ";
+            // secure input
+
+            cin >> msg;
             notesDB[user][id] = msg;
             break;
         case 3:
@@ -86,8 +90,4 @@ int main()
             std::cout << "Invalid choice. Please try again.\n";
         }
     }
-
-    printf("Enter message: ");
-    fflush(stdout);
-    scanf("%s", msg);
 }
