@@ -2,6 +2,12 @@
 RUN = wasmtime
 CC = /emsdk/upstream/emscripten/emcc
 
+noteApp: noteApp.wasm
+	${RUN} noteApp.wasm 
+
+noteApp.wasm: noteApp.cpp
+	${CC}  noteApp.cpp -o noteApp.wasm
+
 main: main.wasm
 	${RUN} main.wasm 
 
