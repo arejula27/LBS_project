@@ -3,7 +3,7 @@ import os
 
 def search_words_in_file(file_path, words):
     results = []
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
         for line_num, line in enumerate(file, 1):
             for word in words:
                 if word.lower() in line.lower():
@@ -22,15 +22,20 @@ def search_words_in_directory(directory, words):
 
 
 def main():
-    directory = input("Enter the path of the directory to analyze: ")
-    if not os.path.isdir(directory):
-        print("The entered path is not a valid directory.")
-        return
-
     keywords_file = "keywords.txt"
     if not os.path.isfile(keywords_file):
         print("The 'keywords.txt' file was not found in the directory.")
         return
+    # check if there is a argument
+    if len(os.sys.argv) > 1:
+        directory = os.sys.argv[1]
+    else:
+        directory = input("Enter the path of the directory to analyze: ")
+    if not os.path.isdir(directory):
+        print("The entered path is not a valid directory.")
+        return
+
+
 
     with open(keywords_file, 'r') as file:
         words = file.read().splitlines()
