@@ -47,7 +47,7 @@ def main():
 
     if results:
         for result in results:
-            print(f"{result[0]}:{result[1]}    \"{result[2]}\"")
+            print(f"{result[0]}\t{result[1]}\t{result[2]}")
     else:
         print("No matches found.")
 

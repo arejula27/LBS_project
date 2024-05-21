@@ -1,0 +1,5 @@
+analyze/glew/src/visualinfo.c;245;strcpy_s(t, sizeof(t), p);
+analyze/glew/src/visualinfo.c;247;strcpy(t, p);
+analyze/glew/auto/src/glewinfo_tail.c;133;if (sscanf_s(argv[p++], "%d.%d", &params->major, &params->minor) != 2) return GL_TRUE;
+analyze/glew/auto/src/glewinfo_tail.c;135;if (sscanf(argv[p++], "%d.%d", &params->major, &params->minor) != 2) return GL_TRUE;
+analyze/glew/auto/src/glew_head.c;117;strcpy(symbolName+1, (const char*)name);
