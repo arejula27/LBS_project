@@ -22,9 +22,9 @@ def search_words_in_directory(directory, words):
 
 
 def main():
-    keywords_file = "keywords.txt"
+    keywords_file = "searcher.conf"
     if not os.path.isfile(keywords_file):
-        print("The 'keywords.txt' file was not found in the directory.")
+        print(f"The {keywords_file} file was not found in the directory.")
         return
     # check if there is a argument
     if len(os.sys.argv) > 1:
