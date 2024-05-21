@@ -16,4 +16,4 @@ fi
 
 
 #Run cppcheck
-cppcheck --enable=warning,style --suppress=missingIncludeSystem $FILE  2>&1 | grep "scanf() without field width limits" > $FILE.cppcheck
+cppcheck --enable=warning,style --suppress=missingIncludeSystem $FILE  2>  $FILE.cppcheck
