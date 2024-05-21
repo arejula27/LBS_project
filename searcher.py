@@ -14,10 +14,13 @@ def search_words_in_file(file_path, words):
 def search_words_in_directory(directory, words):
     all_results = []
     for root, dirs, files in os.walk(directory):
+        
         for file in files:
-            file_path = os.path.join(root, file)
-            results = search_words_in_file(file_path, words)
-            all_results.extend(results)
+            #check cpp extension
+            if file.split('.')[-1] in [ 'cpp',"c","cc","cxx"]:
+                file_path = os.path.join(root, file)
+                results = search_words_in_file(file_path, words)
+                all_results.extend(results)
     return all_results
 
 

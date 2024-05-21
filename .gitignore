@@ -1,4 +1,4 @@
 *.html
 *.wasm
 *.js
-projects/**/*
+analyze/*

@@ -1,0 +1,8 @@
+analyze/noteApp/noteApp.cpp:17    "scanf("%s", user);"
+analyze/noteApp/noteApp.cpp:17    "scanf("%s", user);"
+analyze/noteApp/noteApp.cpp:22    "scanf("%s", passw);"
+analyze/noteApp/noteApp.cpp:22    "scanf("%s", passw);"
+analyze/noteApp/noteApp.cpp:79    "scanf("%s", msg);"
+analyze/noteApp/noteApp.cpp:79    "scanf("%s", msg);"
+analyze/noteApp/noteApp.cpp:92    "scanf("%s", msg);"
+analyze/noteApp/noteApp.cpp:92    "scanf("%s", msg);"
