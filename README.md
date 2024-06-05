@@ -1,4 +1,6 @@
 # Vulnerabilities in WASM
+This repository belongs to a project developed for the course DD2525 at KTH
+
 ## Getting started
 For running this code it is required to compile the code using a C++ to wasm compiler. We recommend using the devcontainer provided in this repo with the VS Code extension. However, it is also possibleto run install all dependecies locally.
 
